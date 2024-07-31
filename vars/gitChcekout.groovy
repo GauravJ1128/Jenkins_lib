@@ -1,9 +1,9 @@
 
-def call(map stageParams) {
+def call(Map stageParams) {
 
     chcekout{[
         $class:     'GitSCM'
-        branch:   [[name: stageParams.branch]],
+        branches:   [[ name: stageParams.branch ]],
         userRemoteCinfig:   [[url:  stageParams.url]]
     ]}
 }
